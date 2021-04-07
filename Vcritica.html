@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Velocidade Critica</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/fatores.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a class="navbar-brand" href="index.html">DMMB</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Potencia.html">Calculo da Potência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="fatores.html">Fatores de Correção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Vcritica.html">Velocidade Critica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md" style="text-align: center;">
+                <div id="div-titulo">
+                    <h2>Velocidade Critica</h2>
+                </div>
+                <div id="div-texto">
+                    <h4 style="text-align: justify; padding: 4%;"> A velocidade Critica num moinho é a velocidade de rotação que provoca a aderência  de qualquer partícula pequena ás placas de revestimento, motivada pela força centrífuga.<br>
+			É determinada pela seguinte equação:</h4>
+                    <div class="div-eq">
+                        <img src="imagens/formula_vc1.PNG">
+                    </div>
+                    <h4>ou:</h4>
+                    <div class="div-eq">
+                        <img src="imagens/formula_vc2.PNG">
+                    </div>
+                    <h4 style="text-align: justify; padding: 4%;">Onde:<br><br>
+            <b>D</b> =  diâmetro interno do moinho medido internamente ao revestimento.<br><br>
+			<b>Cs</b> = velocidade crítica em rpm.<br><br></h4>
+
+                    <h4 style="text-align: justify; padding: 4%;">Para determinar a velocidade do moinho em porcentagem da velocidade crítica, teremos:</h4>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default" style="padding: 15px;">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                              <button style="width: 25em;" class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Em Mestros</button>
+                            </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="div-eq">
+                                        <form method="POST">
+                                            <label for="diametro1">Informe a variavel D em metros:</label>
+                                            <input type="text" class="form-control" id="diametro1" maxlength="5">
+                                            <button type="button" class="btn btn-primary" onclick="calcM()">Calcular Velocidade Crítica.</button>
+                                        </form>
+                                        <div id="w1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" style="padding: 15px;">
+                            <div class="panel-heading" >
+                                <h4 class="panel-title">
+                              <button style="width: 25em;" class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Em Pés</button>
+                            </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="div-eq">
+                                        <form method="POST">
+                                            <label for="diametro2">Informe a variavel D em Pés:</label>
+                                            <input type="text" class="form-control" id="diametro2" maxlength="5">
+                                            <button type="button" class="btn btn-primary" onclick="calcP()">Calcular Velocidade Crítica.</button>
+                                        </form>
+                                        <div id="w2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+function calcM(){
+    		var d1 = document.getElementById('diametro1').value;    		
+            var w1 = 42.305 / Math.sqrt(d1);
+            document.getElementById('w1').innerHTML = "Resultado: "+parseFloat(w1.toFixed(4));      
+
+			
+    	}
+        function calcP(){
+        	var d2 = document.getElementById('diametro2').value;
+        	var w2 = 76.63 / Math.sqrt(d2);
+        	document.getElementById('w2').innerHTML = "Resultado: "+parseFloat(w2.toFixed(4));
+        }  	
+</script>
+</body>
+
+</html>

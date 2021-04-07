@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>EF3-Fator de Diâmetro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/fatores.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a class="navbar-brand" href="index.html">DMMB</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Potencia.html">Calculo da Potência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="fatores.html">Fatores de Correção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Vcritica.html">Velocidade Critica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md" style="text-align: center;">
+      <div id="div-titulo">
+        <h2>
+            EF3-Fator de Diâmetro
+        </h2>
+        </div>
+        <div id ="div-texto">
+        <h4 style="text-align: justify; padding: 4%;">A experiência mostra que a potência por tonelada de corpos moedores aumenta com o diâmetro do moinho na
+            potência de expoente 2,3 enquanto que a capacidade aumenta com o mesmo diâmetro na potência de expoente
+            2,5. Isto indica que a eficiência de moagem varia com o diâmetro.<br><br>
+            Para coincidir com a fórmula de BOND, p diâmetro de base para o cálculo de EF3 é de 8 pés (2,438), medido
+            internamente ás placas do revestimento.<br><br>
+            O fator EF3 é calculado pelas equações: <br><br>
+            <div class="div-img"><img src="imagens/formula_ef3_1.png"></div>
+            <br>
+            <div class="div-img"><img src="imagens/formula_ef3_2.png" width="150px"></div>
+            <br>
+            
+            A próxima tabela apresenta os valores de EF3 já calculados por estas fórmulas para vários diâmetros.<br><br> O
+            fator EF3 deverá ser aplicado em moinhos cujo diâmetro medido internamente ao revestimento seja menor que 8
+            pés.<br><br> O seu uso em moinhos maiores é opcional, e a não aplicação do mesmo representa uma boa medida de
+            segurança.<br><br></h4>
+            <div class="table-responsive">
+                <table class="table" id="tabelaespec">
+                    <thead>
+                    <tr>
+                        <th colspan="2">Diâmetro do Moinho<br>Internamente á carcaça</th>
+                        <th colspan="2">Diâmetro do Moinho<br>Internamente ao Resvestimento</th>
+                        <th>Multiplicador</th>
+                    </tr>
+                    <tr>
+                        <td>Pés</td>
+                        <td>Metros</td>
+                        <td>Pés</td>
+                        <td>Metros</td>
+                        <td>EF3</td>
+                    </tr>
+                    <tr>
+                        <td>3,0</td>
+                        <td>0,914</td>
+                        <td>2,6</td>
+                        <td>0,790</td>
+                        <td>1,25</td>
+                    </tr>
+                    <tr>
+                        <td>3,281</td>
+                        <td>1,000</td>
+                        <td>2,88</td>
+                        <td>0,880</td>
+                        <td>1,23</td>
+                    </tr>
+                    <tr>
+                        <td>4,0</td>
+                        <td>1,220</td>
+                        <td>3,6</td>
+                        <td>1,100</td>
+                        <td>1,17</td>
+                    </tr>
+                    <tr>
+                        <td>5,0</td>
+                        <td>1,520</td>
+                        <td>4,6</td>
+                        <td>1,400</td>
+                        <td>1,12</td>
+                    </tr>
+                    <tr>
+                        <td>6,0</td>
+                        <td>1,830</td>
+                        <td>5,6</td>
+                        <td>1,710</td>
+                        <td>1,075</td>
+                    </tr>
+                    <tr>
+                        <td>6,562</td>
+                        <td>2,000</td>
+                        <td>5,96</td>
+                        <td>1,820</td>
+                        <td>1,06</td>
+                    </tr>
+                    <tr>
+                        <td>7,0</td>
+                        <td>2,130</td>
+                        <td>6,5</td>
+                        <td>1,980</td>
+                        <td>1,042</td>
+                    </tr>
+                    <tr>
+                        <td>8,0</td>
+                        <td>2,440</td>
+                        <td>7,5</td>
+                        <td>2,290</td>
+                        <td>1,014</td>
+                    </tr>
+                    <tr>
+                        <td>8,5</td>
+                        <td>2,590</td>
+                        <td>8,0</td>
+                        <td>2,440</td>
+                        <td>1,000(BASE)</td>
+                    </tr>
+                    <tr>
+                        <td>9,0</td>
+                        <td>2,740</td>
+                        <td>8,5</td>
+                        <td>2,590</td>
+                        <td>0,992</td>
+                    </tr>
+                    <tr>
+                        <td>9,5</td>
+                        <td>2,900</td>
+                        <td>9,0</td>
+                        <td>2,740</td>
+                        <td>0,977</td>
+                    </tr>
+                    <tr>
+                        <td>9,843</td>
+                        <td>3,000</td>
+                        <td>9,34</td>
+                        <td>2,850</td>
+                        <td>0,970</td>
+                    </tr>
+                    <tr>
+                        <td>10,0</td>
+                        <td>3,050</td>
+                        <td>9,5</td>
+                        <td>2,900</td>
+                        <td>0,966</td>
+                    </tr>
+                    <tr>
+                        <td>10,5</td>
+                        <td>3,200</td>
+                        <td>10,0</td>
+                        <td>3,050</td>
+                        <td>0,956</td>
+                    </tr>
+                    <tr>
+                        <td>11,0</td>
+                        <td>3,350</td>
+                        <td>10,5</td>
+                        <td>3,200</td>
+                        <td>0,948</td>
+                    </tr>
+                    <tr>
+                        <td>11,5</td>
+                        <td>3,510</td>
+                        <td>11,0</td>
+                        <td>3,350</td>
+                        <td>0,939</td>
+                    </tr>
+                    <tr>
+                        <td>12,0</td>
+                        <td>3,660</td>
+                        <td>11,5</td>
+                        <td>3,510</td>
+                        <td>0,931</td>
+                    </tr>
+                    <tr>
+                        <td>12,5</td>
+                        <td>3,810</td>
+                        <td>12,0</td>
+                        <td>3,660</td>
+                        <td>0,923</td>
+                    </tr>
+                    <tr>
+                        <td>13,0</td>
+                        <td>3,960</td>
+                        <td>12,5</td>
+                        <td>3,810</td>
+                        <td>0,914</td>
+                    </tr>
+                    <tr>
+                        <td>13,124</td>
+                        <td>4,000</td>
+                        <td>12,62</td>
+                        <td>3,850</td>
+                        <td>0,914</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

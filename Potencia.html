@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Calculador de Potência</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/fatores.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a class="navbar-brand" href="index.html">DMMB</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Potencia.html">Calculo da Potência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="fatores.html">Fatores de Correção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Vcritica.html">Velocidade Critica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md" style="text-align: center;">
+      <div id="div-titulo">
+        <h2>Calculo da Pontência</h2>
+        </div>
+        <div id ="div-texto">
+        <h4 style="text-align: justify; padding: 4%;"> A potência requerida para moer um determinado material pode ser estimada aplicando-se a equação devida a
+            BOND:</h4>
+          <div class="div-eq"><img src="imagens/formula.png"></div>
+          <h4 style="text-align: justify; padding: 4%;">Onde:<br><br>
+            <b>W</b> = Consumo de potência expressa em kWh/t curtas. Para obter o consumo de potência em kWh/t métrica,
+                multiplicar o valor obtido por 1,102.<br>
+            <b>Wi</b> = "Work index" o valor desta variavel sempre será remetido a toneladas curtas, ou seja, 908kg.<br>
+            <b>**Verificar , no entanto, antes de aplicar a fórmula e converter caso necessário.**</b><br>
+            <b>P</b> = Tamanho em micra da abertura da peneira na qual "passa" 80% do produto final moído.<br>
+            <b>F</b> = Tamanho em micra de abertura de peneira na qual "passa" 80% de alimentação do moinho.<br><br>
+            Esta equação de BOND fornece o consumo de energia W em kilowatts-hora por tonelada curta para moagem por via
+                úmida num moinho que tenha diâmetro interno de 8 pés(2438 mm).<br>
+            A fórmula é válida para moinhos de barras, se operarem em circuito aberto e para moinhos de bolas, em
+                circuito fechado.<br>
+            Para obter os valores de consumo de potência relativos a outras condições de trabalho diferentes das
+                consideradas acima, o valor W deverá ser multiplicado pelos fatores de eficiência EF aplicavéis ao caso em
+                consideração.</h4>
+
+                <div class="div-eq">
+                    <form method="POST">
+                    <div>
+                        <label for="produto_final" >Informe a variavel P:</label>
+                        <input type="text" class="form-control" id="produto_final" maxlength="15">
+                    </div>
+                    <div>
+                        <label for="alimentacao">Informe a variavel F:</label>
+                        <input type="text" class="form-control" id="alimentacao" maxlength="15">
+                    </div>
+                    <h5 style="color: black;"><b>Para valores decimais, deve-se utilizar ponto (.) no lugar de vírgulas(,).</b></h5>
+                    <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+                    <br>
+                    <br>
+                    <div id="div-resultado"></div>
+                    </form>
+                </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script>
+function calcular() {
+
+    var p = document.getElementById('produto_final').value;
+    var f = document.getElementById('alimentacao').value;
+    var wi = 907;
+    var w = ((wi / Math.sqrt(p)) - (wi / Math.sqrt(f)));
+
+    document.getElementById('div-resultado').innerHTML = "Resultado: "+parseFloat(w.toFixed(2));
+
+}
+</script>
+</body>
+</html>
