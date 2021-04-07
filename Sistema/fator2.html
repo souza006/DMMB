@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>EF2 - Fator de Circuito Aberto em Moinho de Bolas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/fatores.css">
+</head>
+</style>
+<body">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a class="navbar-brand" href="index.html">DMMB</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Potencia.html">Calculo da Potência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="fatores.html">Fatores de Correção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Vcritica.html">Velocidade Critica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md" style="text-align: center;">
+      <div id="div-titulo">
+        <h2>
+            EF2-Fator de Circuito Aberto em Moinho de Bolas
+        </h2>
+        </div>
+        <div id ="div-texto">
+        <h4 style="text-align: justify; padding: 4%;"> A energia extra requirida na moagem em moinho de bolas em circuito aberto, comparada com moagem em circuito
+            fechado, é função da quantidade de "oversize" permitida no produto final.<br><br>
+            O fator EF2 é aplicado para compensar as diversas quantidades de "oversize" permitidas no produto final.<br><br>
+            
+            A tabela a seguir dá os valores de ineficiência EF2 usados pra moinhos de bolas em circuito aberto.<br><br>
+            <i><b>Quando não especificado ou obtida nenhuma referencia de controle, usar 1,2.</b></i></h4>
+            <div class="faketable">
+                <table class="table" id="tabelaespec">
+                    <tr>
+                        <th scope="col">Referência de controle<br>( % do produto menor que o nominal)</th>
+                        <th scope="col">Multiplicador EF2</th>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>1,035</td>
+                    </tr>
+                    <tr>
+                        <td>60</td>
+                        <td>1,05</td>
+                    </tr>
+                    <tr>
+                        <td>70</td>
+                        <td>1,10</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>1,20</td>
+                    </tr>
+                    <tr>
+                        <td>90</td>
+                        <td>1,40</td>
+                    </tr>
+                    <tr>
+                        <td>92</td>
+                        <td>1,46</td>
+                    </tr>
+                    <tr>
+                        <td>95</td>
+                        <td>1,57</td>
+                    </tr>
+                    <tr>
+                        <td>98</td>
+                        <td>1,70</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

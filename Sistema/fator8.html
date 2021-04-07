@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>EF8 - Fator de Eficiência para moinhos de Barras</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/fatores.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"></span>
+        <a class="navbar-brand" href="index.html">DMMB</a>
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+                <a class="navbar-brand" href="Potencia.html">Calculo da Potência</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="fatores.html">Fatores de Correção</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="Vcritica.html">Velocidade Critica</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md" style="text-align: center;">
+      <div id="div-titulo">
+        <h2>Fator de Eficiência para moinhos de Barras</h2>
+        </div>
+        <div id ="div-texto">
+        <h4 style="text-align: justify; padding: 4%;">Diversos estudos mostram que os moinhos de barras são ineficientes quando se comparam os Wi obtidos de testes em laboratório.</h4>
+        <h4 style="text-align: justify; padding: 4%;">Isto é devido á presença no moinho de barras gastas, finas e quebradas , assim como  ás variações no tamanho da alimentação.</h4>
+        <h4 style="text-align: justify; padding: 4%;">Assim, os seguintes fatores devem ser considerados ao calcular a potência de um moinho de barras.</h4>
+        <h4 style="text-align: justify; padding: 6%;"><b>a) </b>Quando se faz o dimensionamento de um moinho de barras que trabalha com isoladamente no processo de moagem, considerar o fator:</h4>
+        <div class="div-eq">EF8 = 1,4 se  a alimentação vier de circuito aberto de britagem.</div>
+        <h4 style="text-align: justify; padding: 6%;"><b>b) </b>Quando se dimensionar um moinho de barras que pertença a um circuito de moinho de barras + moinho de bolas, sem processo de classificação entre um e outro moinho, considerar o somente para o moinho de barras o fator:</h4>
+        <div class="div-eq">EF8 = 1,2 se  a alimentação do moinho  de barras vier de um circuito aberto de britagem.</div>
+        <br>
+        <div class="div-eq">EF8 = 1,0 se  a alimentação do moinho de barras vier de um circuito fechado de britagem e se essa alimentação for constantemente 80% passante em 1/2" (12,7mm) ou mais fina ( < 1/2").</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

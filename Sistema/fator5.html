@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>EF5 - Fator de Finura para Moinho de Bolas </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/fatores.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a class="navbar-brand" href="index.html">DMMB</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Potencia.html">Calculo da Potência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="fatores.html">Fatores de Correção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="Vcritica.html">Velocidade Critica</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md" style="text-align: center;">
+      <div id="div-titulo">
+        <h2>Fator de Finura para Moinho de Bolas.</h2>
+        </div>
+        <div id ="div-texto">
+        <h4 style="text-align: justify; padding: 4%;">O tamanho das bolas requeridas para fazer produtos mais finos que 80% passante em 200 mesh ( 74 micra ) é menor que aqueles que podem ser fabricados economicamente.<br><br>
+          Como resultado disto, são usadas bolas maiores que o devido, com a resultante perda de eficiência A equação para a perda de eficiência, quando se usam formatos econômicos de bolas para realizar moagem fina, e dada por:<br><br>
+        </h4>
+            <div class="div-img"><img style="width: 155px;" src="imagens/formula_ef5.png"></div>
+            <b>P Pem micra.</b><br><br>
+            <h4 style="text-align: justify; padding: 4%;">A tabela a seguir fornece o fator ES para tamanhos de produto 80% passante, desde 70 micra até 10 micra.</h4>
+            <br>
+            <b>Para tamanhos não indicados nesta tabela, calcular EF5 pela equação acima.</b>
+            <div class="faketable">
+              <table id="tabelaespec">
+                  <tr>
+                      <th>Produto 80% passante(µ)</th>
+                      <th>Fator de Finura</th>
+                      <th>Produto 80% passante(µ)</th>
+                      <th>Fator de Finura</th>
+                  </tr>
+                  <tr>
+                      <td>70</td>
+                      <td>1,01</td>
+                      <td>38</td>
+                      <td>1,11</td>
+                  </tr>
+                  <tr>
+                      <td>65</td>
+                      <td>1,02</td>
+                      <td>35</td>
+                      <td>1,13</td>
+                  </tr>
+                  <tr>
+                      <td>60</td>
+                      <td>1,03</td>
+                      <td>30</td>
+                      <td>1,17</td>
+                  </tr>
+                  <tr>
+                      <td>55</td>
+                      <td>1,04</td>
+                      <td>26(500 mesh)</td>
+                      <td>1,22</td>
+                  </tr>
+                  <tr>
+                      <td>53(270 mesh)</td>
+                      <td>1,04</td>
+                      <td>25</td>
+                      <td>1,23</td>
+                  </tr>
+                  <tr>
+                      <td>50</td>
+                      <td>1,05</td>
+                      <td>20</td>
+                      <td>1,32</td>
+                  </tr>
+                  <tr>
+                      <td>45(325 mesh)</td>
+                      <td>1,07</td>
+                      <td>15</td>
+                      <td>1,47</td>
+                  </tr>
+                  <tr>
+                      <td>40</td>
+                      <td>1,10</td>
+                      <td>10</td>
+                      <td>1,82</td>
+                  </tr>
+              </table>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
